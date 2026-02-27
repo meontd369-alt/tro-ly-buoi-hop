@@ -43,7 +43,7 @@ if st.button("🚀 Bắt Đầu Rà Soát & Xuất Báo Cáo"):
     else:
         try:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-pro')
+            model = genai.GenerativeModel('gemini-pro')
 
             with st.spinner("⏳ Hệ thống đang phân tích giọng nói và viết báo cáo. Quá trình này có thể mất 1-2 phút..."):
                 # Lưu tạm file âm thanh để AI đọc
@@ -82,3 +82,4 @@ if st.button("🚀 Bắt Đầu Rà Soát & Xuất Báo Cáo"):
         except Exception as e:
 
             st.error(f"Đã xảy ra lỗi hệ thống: {e}")
+
